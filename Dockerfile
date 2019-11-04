@@ -6,7 +6,7 @@ RUN \
  	oidentd
 
 RUN adduser -D oidentd
-touch /home/oidentd/.oidentd.conf
+RUN touch /home/oidentd/.oidentd.conf
 
 EXPOSE 113
 
