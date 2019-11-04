@@ -17,6 +17,7 @@ RUN touch /home/znc/.oidentd.conf
 EXPOSE 113
 
 COPY entrypoint.sh /
+COPY 00-try-sh.sh /startup-sequence/
 COPY 01-options.sh /startup-sequence/
 COPY 20-chown.sh /startup-sequence/
 COPY 99-launch.sh /startup-sequence/
