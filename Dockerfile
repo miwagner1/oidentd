@@ -12,7 +12,9 @@ RUN set -x \
     && apk add --no-cache \
     oidentd
 
-RUN touch /home/znc/.oidentd.conf
+RUN touch /home/znc/.oidentd.conf \
+    && chmod 0644 /home/znc/.oidentd.conf \
+    && chmod 0711 /home/znc/
 
 EXPOSE 113
 
