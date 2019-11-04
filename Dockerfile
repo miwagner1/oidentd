@@ -12,9 +12,14 @@ RUN set -x \
     && apk add --no-cache \
     oidentd
 
-RUN adduser -D oidentd
-RUN touch /home/oidentd/.oidentd.conf
+RUN touch /home/znc/.oidentd.conf
 
 EXPOSE 113
 
+COPY entrypoint.sh /
+COPY 01-options.sh /startup-sequence/
+COPY 20-chown.sh /startup-sequence/
+COPY 99-launch.sh /startup-sequence/
+
+ENTRYPOINT ["/entrypoint.sh"]
 CMD /usr/sbin/oidentd -i
