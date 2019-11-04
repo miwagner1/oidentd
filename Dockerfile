@@ -22,4 +22,3 @@ COPY 20-chown.sh /startup-sequence/
 COPY 99-launch.sh /startup-sequence/
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD /usr/sbin/oidentd -i
