@@ -10,4 +10,4 @@ RUN touch /home/oidentd/.oidentd.conf
 
 EXPOSE 113
 
-RUN /usr/sbin/oidentd -i
+CMD /usr/sbin/oidentd -i
