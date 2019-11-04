@@ -1,1 +1,1 @@
-exec /sbin/tini -- /usr/sbin/oidentd -i "$@"
+exec /sbin/tini -- /usr/sbin/oidentd -i
