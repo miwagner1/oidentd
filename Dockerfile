@@ -16,6 +16,12 @@ RUN touch /home/znc/.oidentd.conf \
     && chmod 0644 /home/znc/.oidentd.conf \
     && chmod 0711 /home/znc/
 
+
+
+COPY files/oidentd.conf /etc/oidentd.conf
+
+
+
 EXPOSE 113
 
 CMD /usr/sbin/oidentd -i
